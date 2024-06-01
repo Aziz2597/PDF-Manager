@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Sign PDF</h2>
+<form action="/sign_pdf" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <input type="file" name="signature" required>
+    <!-- Removed the output filename input field -->
+    <input type="number" name="page_number" placeholder="Page number" required>
+    <input type="number" name="x" placeholder="X-coordinate" required>
+    <input type="number" name="y" placeholder="Y-coordinate" required>
+    <button type="submit">Sign</button>
+</form>
+{% endblock %}

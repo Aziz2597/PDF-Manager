@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Split PDF</h2>
+<form action="/split" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <!-- Added two output filename input fields -->
+    <input type="text" name="filename1" placeholder="Enter filename for split file 1" required>
+    <input type="text" name="filename2" placeholder="Enter filename for split file 2" required>
+    <!-- Specify starting page numbers for each split -->
+    <input type="number" name="start_page1" placeholder="Enter starting page for split file 1" required>
+    <input type="number" name="start_page2" placeholder="Enter starting page for split file 2" required>
+    <button type="submit">Split</button>
+</form>
+{% endblock %}

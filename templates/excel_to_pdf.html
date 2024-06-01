@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Convert Excel to PDF</h2>
+<form method="post" action="/excel_to_pdf" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx, .xls" required>
+    <button type="submit">Convert</button>
+</form>
+{% endblock %}

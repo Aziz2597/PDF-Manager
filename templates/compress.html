@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Compress PDF</h2>
+<form action="/compress" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Compress</button>
+</form>
+{% endblock %}

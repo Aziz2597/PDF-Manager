@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Convert Word to PDF</h2>
+<form method="post" action="/word_to_pdf" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".docx, .doc" required>
+    <button type="submit">Convert</button>
+</form>
+{% endblock %}

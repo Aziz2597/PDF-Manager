@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Unlock PDF</h2>
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+<form action="/unlock_pdf" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <input type="password" name="password" placeholder="Enter password" required>
+    <button type="submit">Unlock</button>
+</form>
+{% endblock %}

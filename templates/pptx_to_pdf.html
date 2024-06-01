@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Convert PowerPoint to PDF</h2>
+<form method="post" action="/pptx_to_pdf" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".pptx" required>
+    <button type="submit">Convert</button>
+</form>
+{% endblock %}

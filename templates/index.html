@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="icon-grid">
+    <a href="/merge">
+        <img src="{{ url_for('static', filename='img/merge.svg') }}" alt="Merge PDF">
+        <span>Merge PDF</span>
+    </a>
+    <a href="/split">
+        <img src="{{ url_for('static', filename='img/split.svg') }}" alt="Split PDF">
+        <span>Split PDF</span>
+    </a>
+    <a href="/encrypt">
+        <img src="{{ url_for('static', filename='img/encrypt.jpeg') }}" alt="Encrypt PDF">
+        <span>Encrypt PDF</span>
+    </a>
+    <a href="/unlock_pdf">
+        <img src="{{ url_for('static', filename='img/unlock_pdf.jpeg') }}" alt="Unlock PDF">
+        <span>Unlock PDF</span>
+    </a>
+    <a href="/image_to_pdf">
+        <img src="{{ url_for('static', filename='img/image_to_pdf.svg') }}" alt="Image to PDF">
+        <span>Image to PDF</span>
+    </a>
+    <a href="/extract">
+        <img src="{{ url_for('static', filename='img/extract.png') }}" alt="Extract Text">
+        <span>Extract Text</span>
+    </a>
+</div>
+{% endblock %}
